@@ -3,14 +3,13 @@
   <h1><%-title %></h1>
   <p>Welcome to <%-title %></p>
 
-
-
   <% for (user in users) { %>
 <section>
   	<h3>
   	<%= users[user].name %>
   	 </h3>
-</section>  		 
+     <p>And my ID is... <%= users[user].id %></p>
+</section>
   <% } %>
 
 
