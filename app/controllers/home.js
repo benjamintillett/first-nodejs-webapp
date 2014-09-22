@@ -12,17 +12,35 @@ router.get('/', function (req, res, next) {
   			  text: "A article abut the importance of software"
   			  });
   article.save();
-  // article.complete(function(err) {
-  // 	if (!!err) {
-  // 		console.log("The instance has not been saved:",err)
-  // 	} else {
-  // 		console.log("We have a persisited instance now")
-  // 	}
-  // });
-
   db.Article.findAll().success(function (articles) {
     res.render('index', {
       title: 'Generator-Express MVC',
+      articles: articles
+    });
+  });
+});
+
+router.get('/articles', function (req, res, next) {
+  db.Article.findAll().success(function (articles) {
+    res.render('index', {
+      title: 'All these articles',
+      articles: articles
+    });
+  });
+});
+
+router.get('/articles/new', function (req, res, next) {
+  db.Article.findAll().success(function (articles) {
+    res.render('new_article', {
+      title: 'New Article in Here',
+		});
+	});
+});
+
+router.post('/articles', function (req, res, next) {
+  db.Article.findAll().success(function (articles) {
+    res.render('new_article', {
+      title: 'All them articles',
       articles: articles
     });
   });
