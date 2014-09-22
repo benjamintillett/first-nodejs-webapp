@@ -6,7 +6,7 @@ module.exports = function (app) {
   app.use('/', router);
 };
 
-router.get('/', function (req, res, next) {		
+router.get('/', function (req, res, next) {
   db.Article.findAll().success(function (articles) {
     res.render('index', {
       title: 'Generator-Express MVC',
@@ -46,4 +46,12 @@ router.post('/articles', function (req, res, next) {
       articles: articles
     });
   });
+});
+
+router.get('/user/new', function (req, res, next) {
+  db.Article.findAll().success(function (articles) {
+    res.render('new_user', {
+      title: 'New User in Here',
+		});
+	});
 });

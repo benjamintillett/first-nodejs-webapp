@@ -7,8 +7,14 @@ module.exports = function (sequelize, DataTypes) {
     title: DataTypes.STRING,
     url: DataTypes.STRING,
     text: DataTypes.STRING
-  });
- 
+	}, {
+		classMethods: {
+		associate: function(models) {
+			Article.belongsTo(models.User)
+			}
+		}
+	});
+
   return Article;
 };
 
