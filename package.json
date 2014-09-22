@@ -18,7 +18,8 @@
     "sequelize": "~1.7.9",
     "lodash": "~2.4.1",
     "pg": "~3.4.0",
-    "ejs": "~1.0.0"
+    "ejs": "~1.0.0",
+    "express-session": "~1.7.6"
   },
   "devDependencies": {
     "grunt": "~0.4.5",

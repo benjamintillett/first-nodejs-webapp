@@ -10,7 +10,8 @@ router.get('/', function (req, res, next) {
   db.Article.findAll().success(function (articles) {
     res.render('index', {
       title: 'Generator-Express MVC',
-      articles: articles
+      articles: articles,
+      id: req.session.dog
     });
   });
 });
@@ -55,15 +56,18 @@ router.get('/users/new', function (req, res, next) {
 		});
 	});
 });
+
 router.post('/users', function (req, res, next) {
-    var user = db.User.build({name: req.body.name,
+  req.session.dog = 1;
+  var user = db.User.build({name: req.body.name,
   			  password: req.body.password
   			  });
   user.save();
   db.User.findAll().success(function (users) {
     res.render('users', {
       title: 'Stalk the users',
-      users: users
+      users: users,
+      dog: req.session.dog
 		});
 	});
 });
