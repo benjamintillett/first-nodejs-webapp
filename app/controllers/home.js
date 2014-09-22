@@ -11,7 +11,7 @@ router.get('/', function (req, res, next) {
     res.render('index', {
       title: 'Generator-Express MVC',
       articles: articles,
-      id: req.session.dog
+      id: req.session.user_id
     });
   });
 });
@@ -58,16 +58,18 @@ router.get('/users/new', function (req, res, next) {
 });
 
 router.post('/users', function (req, res, next) {
-  req.session.dog = 1;
+  
   var user = db.User.build({name: req.body.name,
   			  password: req.body.password
   			  });
-  user.save();
+  user.save().success(function(user){
+  	req.session.user_id = user.id;
+  });
   db.User.findAll().success(function (users) {
     res.render('users', {
       title: 'Stalk the users',
       users: users,
-      dog: req.session.dog
+      dog: req.session.user_id
 		});
 	});
 });
