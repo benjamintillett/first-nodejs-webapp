@@ -1,0 +1,21 @@
+<% include header %>
+
+  <h1><%-title %></h1>
+  <p>Welcome to <%-title %></p>
+
+
+
+  <% for (article in articles) { %>
+<section>
+  	<h3>
+  	<%= articles[article].title %>
+  	 </h3>
+
+  	<h5>
+  		<a href="<%- articles[article].url  %>"><%- articles[article].text %></a>
+  	</h5>
+</section>  		 
+  <% } %>
+
+
+<% include footer %>

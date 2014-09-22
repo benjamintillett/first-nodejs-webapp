@@ -3,4 +3,12 @@
   <h1><%-title %></h1>
   <p>Welcome to <%-title %></p>
 
+<form action="/articles" method="post">
+	Title:<input type="text" name="title">
+	Url:<input type="text" name="url">
+	Text:<input type="text" name="text">
+	<input type="submit" value="Fire Away">
+</form>
+
+
 <% include footer %>

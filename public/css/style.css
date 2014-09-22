@@ -1,0 +1,22 @@
+body {
+	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+section {
+	background-color:purple;
+	color:white;
+	padding:5px;
+	padding-left:20px;
+	width:40%;
+	border-radius:5px;
+	margin:15px;
+
+}
+a {
+	color:white;
+	text-decoration:none;
+}
+
+a:hover {
+	color:#000;
+}
