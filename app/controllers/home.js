@@ -48,10 +48,22 @@ router.post('/articles', function (req, res, next) {
   });
 });
 
-router.get('/user/new', function (req, res, next) {
+router.get('/users/new', function (req, res, next) {
   db.Article.findAll().success(function (articles) {
     res.render('new_user', {
       title: 'New User in Here',
+		});
+	});
+});
+router.post('/users', function (req, res, next) {
+    var user = db.User.build({name: req.body.name,
+  			  password: req.body.password
+  			  });
+  user.save();
+  db.User.findAll().success(function (users) {
+    res.render('users', {
+      title: 'Stalk the users',
+      users: users
 		});
 	});
 });
