@@ -29,7 +29,7 @@ var config = {
       name: 'nodejs'
     },
     port: 3000,
-    db: ENV["DATABASE_URL"]
+    db: process.env.DATABASE_URL
     
   }
 };
