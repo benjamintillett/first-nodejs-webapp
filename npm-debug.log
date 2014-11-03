@@ -1,95 +1,26 @@
 0 info it worked if it ends with ok
-1 verbose cli [ 'node', '/usr/local/bin/npm', 'install', 'cookieParser' ]
-2 info using npm@2.0.2
-3 info using node@v0.10.31
-4 verbose readDependencies using package.json deps
-5 verbose cache add [ 'cookieParser', null ]
-6 verbose cache add spec="cookieParser" args=["cookieParser",null]
-7 verbose parsed spec { raw: 'cookieParser',
-7 verbose parsed spec   scope: null,
-7 verbose parsed spec   name: 'cookieParser',
-7 verbose parsed spec   rawSpec: '',
-7 verbose parsed spec   spec: '*',
-7 verbose parsed spec   type: 'range' }
-8 verbose parsed spec { raw: 'cookieParser',
-8 verbose parsed spec   scope: null,
-8 verbose parsed spec   name: 'cookieParser',
-8 verbose parsed spec   rawSpec: '',
-8 verbose parsed spec   spec: '*',
-8 verbose parsed spec   type: 'range' }
-9 verbose addNamed [ 'cookieParser', '*' ]
-10 verbose addNamed [ null, '*' ]
-11 silly lockFile 90d419c3-cookieParser cookieParser@*
-12 verbose lock cookieParser@* /Users/ben/.npm/90d419c3-cookieParser.lock
-13 silly addNameRange { name: 'cookieParser', range: '*', hasData: false }
-14 verbose mapToRegistry name cookieParser
-15 verbose mapToRegistry uri https://registry.npmjs.org/cookieParser
-16 verbose request on initialization, where is /cookieParser
-17 verbose request after pass 1, where is /cookieParser
-18 verbose request url raw /cookieParser
-19 verbose request resolving registry [ 'https://registry.npmjs.org/', './cookieParser' ]
-20 verbose request after pass 2, where is https://registry.npmjs.org/cookieParser
-21 verbose request no auth needed
-22 info attempt registry request try #1 at 16:10:13
-23 verbose request id fe2ef6965c8f03e8
-24 http request GET https://registry.npmjs.org/cookieParser
-25 http 404 https://registry.npmjs.org/cookieParser
-26 verbose headers { date: 'Mon, 22 Sep 2014 15:10:14 GMT',
-26 verbose headers   server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
-26 verbose headers   'content-type': 'application/json',
-26 verbose headers   'cache-control': 'max-age=0',
-26 verbose headers   'content-length': '52',
-26 verbose headers   'accept-ranges': 'bytes',
-26 verbose headers   via: '1.1 varnish',
-26 verbose headers   age: '0',
-26 verbose headers   'x-served-by': 'cache-fra1234-FRA',
-26 verbose headers   'x-cache': 'MISS',
-26 verbose headers   'x-cache-hits': '0',
-26 verbose headers   'x-timer': 'S1411398614.159800,VS0,VE422',
-26 verbose headers   'keep-alive': 'timeout=10, max=50',
-26 verbose headers   connection: 'Keep-Alive' }
-27 silly registry.get cb [ 404,
-27 silly registry.get   { date: 'Mon, 22 Sep 2014 15:10:14 GMT',
-27 silly registry.get     server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
-27 silly registry.get     'content-type': 'application/json',
-27 silly registry.get     'cache-control': 'max-age=0',
-27 silly registry.get     'content-length': '52',
-27 silly registry.get     'accept-ranges': 'bytes',
-27 silly registry.get     via: '1.1 varnish',
-27 silly registry.get     age: '0',
-27 silly registry.get     'x-served-by': 'cache-fra1234-FRA',
-27 silly registry.get     'x-cache': 'MISS',
-27 silly registry.get     'x-cache-hits': '0',
-27 silly registry.get     'x-timer': 'S1411398614.159800,VS0,VE422',
-27 silly registry.get     'keep-alive': 'timeout=10, max=50',
-27 silly registry.get     connection: 'Keep-Alive' } ]
-28 silly lockFile 90d419c3-cookieParser cookieParser@*
-29 silly lockFile 90d419c3-cookieParser cookieParser@*
-30 verbose stack Error: 404 Not Found: cookieParser
-30 verbose stack     at RegClient.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:258:14)
-30 verbose stack     at Request._callback (/usr/local/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:197:65)
-30 verbose stack     at Request.self.callback (/usr/local/lib/node_modules/npm/node_modules/request/request.js:237:22)
-30 verbose stack     at Request.emit (events.js:98:17)
-30 verbose stack     at Request.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/request/request.js:1146:14)
-30 verbose stack     at Request.emit (events.js:117:20)
-30 verbose stack     at IncomingMessage.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/request/request.js:1097:12)
-30 verbose stack     at IncomingMessage.emit (events.js:117:20)
-30 verbose stack     at _stream_readable.js:943:16
-30 verbose stack     at process._tickCallback (node.js:419:13)
-31 verbose statusCode 404
-32 verbose pkgid cookieParser
-33 verbose cwd /Users/ben/dev/nodejs
-34 error Darwin 13.2.0
-35 error argv "node" "/usr/local/bin/npm" "install" "cookieParser"
-36 error node v0.10.31
-37 error npm  v2.0.2
-38 error code E404
-39 error 404 Not Found: cookieParser
-39 error 404
-39 error 404 'cookieParser' is not in the npm registry.
-39 error 404 You should bug the author to publish it (or use the name yourself!)
-39 error 404 It was specified as a dependency of 'nodejs'
-39 error 404
-39 error 404 Note that you can also install from a
-39 error 404 tarball, folder, http url, or git url.
-40 verbose exit [ 1, true ]
+1 verbose cli [ 'node', '/usr/local/bin/npm', 'start' ]
+2 info using npm@1.4.28
+3 info using node@v0.10.32
+4 verbose run-script [ 'prestart', 'start', 'poststart' ]
+5 info prestart nodejs@0.0.1
+6 info start nodejs@0.0.1
+7 verbose unsafe-perm in lifecycle true
+8 info nodejs@0.0.1 Failed to exec start script
+9 error nodejs@0.0.1 start: `node app.js`
+9 error Exit status 8
+10 error Failed at the nodejs@0.0.1 start script.
+10 error This is most likely a problem with the nodejs package,
+10 error not with npm itself.
+10 error Tell the author that this fails on your system:
+10 error     node app.js
+10 error You can get their info via:
+10 error     npm owner ls nodejs
+10 error There is likely additional logging output above.
+11 error System Darwin 14.0.0
+12 error command "node" "/usr/local/bin/npm" "start"
+13 error cwd /Users/benjamintillett/dev/makers_academy/first-nodejs-webapp
+14 error node -v v0.10.32
+15 error npm -v 1.4.28
+16 error code ELIFECYCLE
+17 verbose exit [ 1, true ]

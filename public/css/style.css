@@ -1,5 +1,7 @@
 body {
 	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	margin: auto;
+	width:60%;
 }
 
 section {
@@ -7,16 +9,16 @@ section {
 	color:white;
 	padding:5px;
 	padding-left:20px;
-	width:40%;
+	width:100%;
 	border-radius:5px;
 	margin:15px;
 
 }
-a {
+a.article {
 	color:white;
 	text-decoration:none;
 }
 
-a:hover {
+a.article:hover {
 	color:#000;
 }

@@ -12,10 +12,12 @@
   	 </h3>
 
   	<h5>
-  		<a href="<%- articles[article].url  %>"><%- articles[article].text %></a>
+  		<a class="article" href="<%- articles[article].url  %>"><%- articles[article].text %></a>
   	</h5>
 </section>  		 
   <% } %>
 
+<a href="/users">View all users</a>
+<a href="/articles/new">add an article</a>  
 
 <% include footer %>

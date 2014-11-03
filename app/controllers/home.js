@@ -9,7 +9,7 @@ module.exports = function (app) {
 router.get('/', function (req, res, next) {
 	db.Article.findAll().success(function (articles) {
 		res.render('index', {
-			title: 'Generator-Express MVC',
+			title: 'Ben First Node.js app',
 			articles: articles,
 			id: req.session.user_id,
 		});
@@ -41,15 +41,17 @@ router.post('/articles', function (req, res, next) {
 			text: req.body.text,
 			user: user
 		});
-		article.save().success(function(article) {console.log(article)});
-	});
-
-	db.Article.findAll().success(function (articles) {
-		res.render('articles', {
-			title: 'All them articles',
-			articles: articles
+		article.save().success(function() {
+			db.Article.findAll().success(function (articles) {
+				res.render('articles', {
+					title: 'All them articles',
+					articles: articles
+				});
+			});
 		});
 	});
+
+
 });
 
 router.get('/users/new', function (req, res, next) {
@@ -70,12 +72,24 @@ router.post('/users', function (req, res, next) {
 	});
 	db.User.findAll().success(function (users) {
 		res.render('users', {
-			title: 'Stalk the users',
+			title: 'Users',
 			users: users,
 			dog: req.session.user_id
 		});
 	});
 });
+
+router.get('/users', function (req, res, next) {
+	db.User.findAll().success(function (users) {
+		res.render('users', {
+			title: 'Users',
+			users: users,
+			dog: req.session.user_id
+		});
+	});
+});
+
+
 
 var current_user = function (request, callback) {
 	db.User.find(request.session.user_id).success( function(user) {
