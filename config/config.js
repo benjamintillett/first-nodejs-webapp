@@ -29,7 +29,7 @@ var config = {
       name: 'nodejs'
     },
     port: 3000,
-    db: 'postgres://localhost/nodejs-production'
+    db: ENV["DATABASE_URL"]
     
   }
 };
